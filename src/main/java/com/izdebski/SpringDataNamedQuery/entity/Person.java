@@ -14,10 +14,11 @@ import org.hibernate.annotations.DynamicUpdate;
         @NamedQuery(name = "Person.findByFirstNameAndEmail", query = "SELECT p FROM Person p WHERE p.firstName=?1 AND email=?2")
 })*/
 
-@NamedNativeQueries(value = {
+/*@NamedNativeQueries(value = {
         @NamedNativeQuery(name = "Person.getPeronInfoByLastName", query = "SELECT *FROM persons_table WHERE last_name=?1",resultClass=Person.class),
         @NamedNativeQuery(name = "Person.findByFirstNameAndEmail", query = "SELECT *FROM persons_table WHERE first_name=?1 AND email=?2",resultClass=Person.class)
 })
+*/
 
 public class Person {
 
