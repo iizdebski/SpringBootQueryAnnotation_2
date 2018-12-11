@@ -9,9 +9,9 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface PeopleManangementDao extends CrudRepository<Person, Integer>{
 
-    @Query(value = "SELECT p FROM Person p WHERE p.lastName=?1")
+    @Query(value = "SELECT*FROM persons_table WHERE last_name=?1",nativeQuery = true)
     List<Person> getPeronInfoByLastName(String lastName);
 
-    @Query(value = "SELECT p FROM Person p WHERE p.firstName=?1 AND email=?2")
+    @Query(value="SELECT*FROM persons_table WHERE first_name=?1 AND email=?2", nativeQuery = true)
     List<Person> findByFirstNameAndEmail(String firstName,String email);
 }
